@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema[7.0].define(version: 2023_02_14_191817) do
   create_table "users", force: :cascade do |t|
     t.string "provider", default: "email", null: false
@@ -35,5 +36,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_14_191817) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
   end
+
 
 end
