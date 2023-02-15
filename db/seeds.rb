@@ -8,10 +8,15 @@
 
 
 puts "Deleting seeds"
+Category.destroy_all
 Product.destroy_all
 puts "Deletion Complete"
 
 puts "Seeding...."
+
+category1 = Category.create(name: "face")
+category1 = Category.create(name: "body")
+
 
 product1 = Product.create(name: "Serum", price: 3000, image_url: "https://res.cloudinary.com/dphlf7a8o/image/upload/v1676399594/pexels-alesia-kozik-7796985_ztokxn.jpg")
 product2 = Product.create(name: "Sunscreen", price: 2500, image_url: "https://res.cloudinary.com/dphlf7a8o/image/upload/v1675859652/sunscreen_q2i7oi.jpg")
